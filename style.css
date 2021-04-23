@@ -12,7 +12,7 @@
 
 body {
     background: moccasin;
-    background-image: url(assets/image/bg.jpg) no-repeat;
+    background-image: url(assets/image/bg.jpg);
     margin: 0 auto;
 }
 
