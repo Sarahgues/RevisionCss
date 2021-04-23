@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@100&family=Zen+Dots&display=swap");
 @font-face {
-    font-family: "Roboto-Medium";
+    font-family: "font 1";
     src: url(Roboto);
 }
 
+
+/* * {
+            margin: 0;
+            padding: 0;
+        } */
+
 body {
     background: moccasin;
-    background-image: url(./assets/bg.jpg);
+    background-image: url(assets/image/bg.jpg) no-repeat;
     margin: 0 auto;
 }
 
@@ -23,8 +29,8 @@ h1 {
 }
 
 main {
-    background: whitesmoke;
-    width: 85%;
+    background: rgba(245, 245, 245, 0.383);
+    width: 70%;
     min-height: 700px;
     margin: 0 auto;
     padding: 10px 40px;
@@ -32,6 +38,123 @@ main {
     box-shadow: 0 2px 12px 5px #9a9a17;
 }
 
+
+/* *****************positioning ******************/
+
+.positioning,
+.grid {
+    border: 2px solid skyblue;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .positioning {
-    border: 2px solid rgb(102, 155, 199);
+    position: relative;
+}
+
+#circle {
+    height: 60px;
+    width: 60px;
+    background: pink;
+    padding: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    right: 110px;
+    box-shadow: 0 2px 12px 5px #9a9a1793;
+    z-index: 1;
+}
+
+#rectangle {
+    height: 15px;
+    width: 100px;
+    background: rgb(53, 184, 207);
+    padding: 20px;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#flexbox ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+#flexbox li {
+    list-style-type: none;
+    font-size: 0.7rem;
+    height: 160px;
+    width: 160px;
+    background: orange;
+    /* centrer veticalement le texte*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#flexbox-2,
+ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#flexbox-2,
+li {
+    list-style-type: none;
+    font-size: 0.7rem;
+    height: 160px;
+    width: 160px;
+    background: rgb(233, 82, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* *****************Grid ******************/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "i1 i2" "ta ta" "bt bt";
+}
+
+input,
+textarea {
+    margin: 5px;
+    height: 45px;
+    border: 1px solid blue;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: "font 1";
+}
+
+#firstname {
+    grid-area: i1;
+}
+
+#surname {
+    grid-area: i2;
+}
+
+textarea {
+    grid-area: ta;
+    resize: none;
+}
+
+input[type="submit"] {
+    grid-area: bt;
 }
