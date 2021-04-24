@@ -1,13 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@100&family=Zen+Dots&display=swap");
 @font-face {
     font-family: "font 1";
     src: url(Roboto);
 }
 
-* {
+
+/* * {
     margin: 0;
     padding: 0;
-}
+    border: 2px red solid;
+} */
 
 body {
     background: moccasin;
@@ -123,6 +126,10 @@ li {
     padding: 20px;
 }
 
+.img {
+    text-align: center;
+}
+
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -156,4 +163,68 @@ textarea {
 
 input[type="submit"] {
     grid-area: bt;
+    cursor: pointer;
+    background: rgb(199, 231, 133);
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background: rgb(98, 146, 3);
+}
+
+@media screen and (max-width: 1000px) {
+    .grid-container {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "i1" "i2" "ta" "bt";
+    }
+}
+
+.transition {
+    background: linear-gradient(90deg, black 50%, yellow 50%);
+    width: 800px;
+    height: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 2px 1px 3px #333;
+    margin: 10rem auto;
+    border-radius: 8px;
+}
+
+.h1transition {
+    color: yellow;
+    font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    text-transform: uppercase;
+    font-family: "Zen Dots", cursive;
+    width: 530px;
+    mix-blend-mode: difference;
+    animation: move linear infinite 10s;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(-400px, -90px);
+    }
+    25% {
+        transform: translate(-220px, 0px);
+    }
+    50% {
+        transform: translate(-60px, -90px);
+    }
+    75% {
+        transform: translate(-220px, -180px);
+    }
+    100% {
+        transform: translate(-400px, -90px);
+    }
 }
