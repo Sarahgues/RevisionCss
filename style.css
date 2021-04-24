@@ -228,3 +228,78 @@ input[type="submit"]:hover {
         transform: translate(-400px, -90px);
     }
 }
+
+
+/********************* VIDEO*********************/
+
+#video_player {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+}
+
+.video_title {
+    font-size: 4rem;
+    position: absolute;
+    top: 1rem;
+    font-weight: bold;
+    color: rgb(35, 126, 129);
+    text-shadow: 1px 2px 6px#000;
+    position: relative;
+}
+
+.video_button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 0.5rem 2rem;
+    margin: 5rem 0 0 0;
+    text-transform: uppercase;
+    background: rgba(245, 245, 245, 0.425);
+    border-radius: 0 0 20px 20px;
+    font-size: 2rem;
+    box-shadow: 0 0 6px white;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: baseline;
+    transition: 0.7s ease;
+}
+
+.text {
+    margin: 0;
+    font-weight: bold;
+    transform: translate(14px);
+    transition: 0.4s ease;
+}
+
+.fas {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: 0.4s ease;
+}
+
+.video_button:hover {
+    filter: brightness(-140px);
+}
+
+.video_button:hover .fas {
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+.video_button:hover .text {
+    transform: translateX(-10px);
+}
+
+.video_button:hover {
+    filter: brightness(-140px);
+}
+
+.video_button:active {
+    transform: scale(0.96) translateX(1);
+}
